@@ -1,0 +1,26 @@
+﻿[
+	{
+		"category":"企业网站",
+		"name":"和瑞控股",
+		"detail":"项目耗时3周，主要处理前端页面及程序嵌套，只适应于PC端应用",
+		"tech":"Html、Css2、Coldfusion等"
+	},
+	{
+		"category":"平台门户",
+		"name":"珍诚医药",		
+		"detail":"长期维护，功能迭代，及功能模块的增加与性能的优化",
+		"tech":"Html、Css2、Javascript、Jquery、Java等"
+	},
+	{
+		"category":"平台门户",
+		"name":"网上药博会",
+		"detail":"项目初建耗时4月，从需求到页面设计,到前端实现,到功能开发和集成等全程处理",
+		"tech":"Html、Css2、Javascript、Jquery、Coldfusion等"
+	},
+	{
+		"category":"移动平台",
+		"name":"政教通",
+		"detail":"项目初建耗时3月，移动端Hybrid模式的应用及开发",
+		"tech":"Html5、Css3、Jquery、AngularJs、Java等"
+	}
+]

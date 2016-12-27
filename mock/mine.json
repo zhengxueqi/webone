@@ -1,0 +1,29 @@
+[	
+	{
+		"image":"./img/my1.jpg",
+		"category":"我的工作",
+		"name":"前三年的生物"
+
+
+	},
+	{
+		"image":"./img/my2.jpg",
+		"category":"我的工作",
+		"name":"前三年的生物"
+
+	},
+	{
+		"image":"./img/my3.jpg",
+		"category":"我的工作",
+		"name":"前三年的生物"
+
+
+	},
+	{
+		"image":"./img/my4.png",
+		"category":"我的工作",
+		"name":"前三年的生物"
+
+
+	}
+]
