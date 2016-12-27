@@ -23,13 +23,13 @@ ul{
 .music{
 	position:absolute;
 	right:10px;
-	top:30px;
+	top:50px;
 	
 	z-index:100;
 	transform-origin:center,center;
 	img{
-		width:40px;
-		height:40px;
+		width:30px;
+		height:30px;
 	}
 }
 
@@ -57,28 +57,35 @@ div.slide1{
 	background-size:$SH $SH;
 	display:flex;
 	h2{
-		font-size: 30px;
+		font-size: 22px;
 		color:#fd1010;
 		background-color:rgba(205,240,227,0.2);
 
 	}
-	ul{	
-		border:1px solid #8494f5;
-		color:#eaedff;
-		width:65%;
-		font-size: 1rem;
-		&:nth-of-type(odd){
-			align-self: flex-start;
-		}
-		&:nth-of-type(even){
-			align-self: flex-end;
+	#skill-div{
+		display: flex;
+		flex-direction:column;
+		ul{	
+			padding:5px 0;
+			border:1px solid #8494f5;
+			color:#eaedff;
+			width:65%;
+			font-size: 14px;
+			&:nth-of-type(odd){
+				align-self: flex-start;
+			}
+			&:nth-of-type(even){
+				align-self: flex-end;
+			}
+			
 		}
 	}
 
 }
 
 #slide3{
-
+	color:black;
+	
 	background:url(../img/ova4.jpg) no-repeat ;
 	background-size:$SH $SH;
 	.positRela{
@@ -214,15 +221,17 @@ div.slide1{
 	  flex-direction: row;
 	  align-items:center;
 	  color: white;
-	  div{
+	  .button{
 	  	flex: 1;
+	  	display: flex;
 	  	text-align: center;
+	  	flex-direction: column;
 	  }
 	  .active{
-	  	background-color:#666;	
-	  	line-height: 49px;
-	  	font-size:18px;
-	  	font-weight: bold;
+	  	background-color:#666;	  	
+	  	color:deepskyblue;
+	  	height: 45px;
+	  	padding-top:5px
 	  }
 }
 

@@ -1,5 +1,4 @@
-var swiperAni = require('./common/libs/swiper/swiper.animate1.0.2.min.js');
-var Swiper = require('./common/libs/swiper/swiper.min.js');
+
 var IScroll = require('./common/libs/iscroll/iscroll.js');
 var Intro = require('./common/utils/intro.js');
 
@@ -14,24 +13,14 @@ if(localStorage.info){
 	$('#intro').show();
 	$('#mainContent').hide();
 }
+Intro.ajaxData();
 
-var swiper = new Swiper('.swiper-container',{
-          onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
-           swiperAni.swiperAnimateCache(swiper); //隐藏动画元素 
-            swiperAni.swiperAnimate(swiper); //初始化完成开始动画
-          }, 
-          onSlideChangeEnd: function(swiper){ 
-            swiperAni.swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
-          },
-          pagination: '.swiper-pagination',
-          paginationType: 'progress'
-    });
+
 	tabjson("skills");
 var myScroll;
 	myScroll = new IScroll('#wrapper', { mouseWheel: true });
 	document.addEventListener('touchmove',
 	 function (e) { e.preventDefault(); }, false);
-
 
 $('#moreContent').on('tap',function(){
 	//localStorage.info=true;
@@ -45,7 +34,7 @@ $('#moreContent').on('tap',function(){
 
 
 
-Intro.ajaxData();
+
 
 
 
@@ -70,7 +59,7 @@ function tabjson(jsonname){
 	             			str+="<img src='"+data[i][each]+"'>"
 	             		}
 	             	}else{
-	             		str +="<p>"+data[i][each]+"</p>"; 
+	             		str +="<p title='"+data[i][each]+"'>"+data[i][each]+"</p>"; 
 	             	}
 				}
               str+="</li>";
@@ -90,10 +79,10 @@ var audio = document.getElementById('music');
 var time=setInterval(function(){	
 	degree++;
 $('.music').css('transform','rotate('+degree+'deg)');
-},5);
+},14);
 
 $('.music').on('click',function(){
-	degree=0;
+	
 	clearInterval(time);
 	num++;
 	if(num==1){		
@@ -102,8 +91,11 @@ $('.music').on('click',function(){
 	}else{		
 		time=setInterval(function(){	
 		degree++;
+		if(degree===360){
+			degree=0;
+		}
 		$('.music').css('transform','rotate('+degree+'deg)');
-		},5);
+		},14);
 		num=0;
 		if(audio!==null){
 		  if(!audio.paused)  
@@ -120,11 +112,6 @@ $('.music').on('click',function(){
 
 
 
-/*********点击创建div**************/
-	/*$('body').on('tap',function(e){
-		$.remove($('.creatDiv'));
-		$('body').append('<div class="creatDiv" style="position:absolute;width:30px;height:30px;border-radius:100% 100%;background-color:rgba(51,156,211,0.5)"></div>');
-		
-	})*/
+
 
     
